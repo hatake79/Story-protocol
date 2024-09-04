@@ -1,10 +1,21 @@
 # Hướng dẫn Cài đặt và Chạy Node cho Dự án Story
 
-## 1. Yêu cầu hệ thống
-
 Trước khi bắt đầu, hãy đảm bảo rằng bạn đã cài đặt các yêu cầu hệ thống sau:
 
-- Hệ điều hành: Ubuntu 20.04 hoặc mới hơn
+### **Thông số Phần cứng**
+
+| **Yêu cầu** | **Chi tiết** |
+|-------------|--------------|
+| **CPU**     | 4 Cores      |
+| **RAM**     | 8 GB         |
+| **Ổ đĩa**   | 200 GB       |
+| **Băng thông** | 10 MBit/s  |
+
+### **Ghi chú**
+
+- Đảm bảo hệ thống của bạn đáp ứng các yêu cầu trên để đảm bảo hiệu suất tối ưu cho việc chạy phần mềm và dịch vụ.
+- Các yêu cầu này có thể thay đổi tùy theo phiên bản phần mềm và khối lượng công việc.
+- Hệ điều hành: Ubuntu 22.04
 - Các công cụ cơ bản: `curl`, `git`, `make`, `jq`, `build-essential`, `gcc`, `unzip`, `wget`, `lz4`, `aria2`
 
 ## 2. Cài đặt
