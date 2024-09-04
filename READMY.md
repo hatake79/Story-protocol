@@ -89,19 +89,17 @@ EOF
 ```bash
 sudo tee /etc/systemd/system/story.service > /dev/null <<EOF
 [Unit]
-Description=Story Consensus Client
+Description=Story Service
 After=network.target
 
 [Service]
-User=test
 ExecStart=/home/test/go/bin/story run
+WorkingDirectory=/home/test
+User=test
 Restart=on-failure
-RestartSec=3
-LimitNOFILE=4096
 
 [Install]
 WantedBy=multi-user.target
-EOF
 ````
 4. Quản lý Dịch vụ
 4.1. Khởi động dịch vụ
