@@ -20,43 +20,33 @@ sudo apt install curl git make jq build-essential gcc unzip wget lz4 aria2 -y
 wget https://story-geth-binaries.s3.us-west-1.amazonaws.com/geth-public/geth-linux-amd64-0.9.2-ea9f0d2.tar.gz
 tar -xzvf geth-linux-amd64-0.9.2-ea9f0d2.tar.gz
 
-# Tạo thư mục $HOME/go/bin nếu nó chưa tồn tại
-[ ! -d "$HOME/go/bin" ] && mkdir -p $HOME/go/bin
-
-# Thêm $HOME/go/bin vào PATH nếu nó chưa có trong .bashrc
-if ! grep -q "$HOME/go/bin" $HOME/.bashrc; then
-  echo 'export PATH=$PATH:$HOME/go/bin' >> $HOME/.bashrc
-fi
-
 # Sao chép tệp geth vào $HOME/go/bin với tên story-geth
 sudo cp geth-linux-amd64-0.9.2-ea9f0d2/geth $HOME/go/bin/story-geth
 
-# Nạp lại .bashrc để cập nhật PATH
-source $HOME/.bashrc
-
 # Kiểm tra phiên bản story-geth
 story-geth version
+
 2.3. Tải xuống và cài đặt story
 # Tải xuống và giải nén tệp
 wget https://story-geth-binaries.s3.us-west-1.amazonaws.com/story-public/story-linux-amd64-0.9.11-2a25df1.tar.gz
 tar -xzvf story-linux-amd64-0.9.11-2a25df1.tar.gz
 
+# Sao chép tệp story vào $HOME/go/bin với tên story
+sudo cp story-linux-amd64-0.9.11-2a25df1/story $HOME/go/bin/story
+
+# Kiểm tra phiên bản story
+story version
+
+Cập nhật .bashrc
 # Tạo thư mục $HOME/go/bin nếu nó chưa tồn tại
 [ ! -d "$HOME/go/bin" ] && mkdir -p $HOME/go/bin
 
 # Thêm $HOME/go/bin vào PATH nếu nó chưa có trong .bashrc
 if ! grep -q "$HOME/go/bin" $HOME/.bashrc; then
   echo 'export PATH=$PATH:$HOME/go/bin' >> $HOME/.bashrc
+  source $HOME/.bashrc
 fi
 
-# Sao chép tệp story vào $HOME/go/bin với tên story
-sudo cp story-linux-amd64-0.9.11-2a25df1/story $HOME/go/bin/story
-
-# Nạp lại .bashrc để cập nhật PATH
-source $HOME/.bashrc
-
-# Kiểm tra phiên bản story
-story version
 2.4. Khởi tạo Story
 story init --network iliad --moniker "Your_moniker_name"
 3. Cấu hình Dịch vụ
