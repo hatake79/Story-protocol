@@ -100,6 +100,7 @@ Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
+EOF
 ````
 4. Quản lý Dịch vụ
 4.1. Khởi động dịch vụ
