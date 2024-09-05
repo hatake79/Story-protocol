@@ -95,6 +95,7 @@ After=network.target
 [Service]
 User=$USER
 Group=$USER
+WorkingDirectory=$HOME
 ExecStart=$GO_INSTALL_DIR/bin/story run
 Restart=on-failure
 RestartSec=3
