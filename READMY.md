@@ -134,7 +134,7 @@ journalctl -u story-geth.service
 journalctl -u story.service
 ````
 8. Thông tin liên hệ
-Kênh youtube:
+
 ```bash
 youtube.com/@dockhachhanh
 ````
